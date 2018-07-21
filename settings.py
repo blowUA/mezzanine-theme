@@ -75,6 +75,8 @@ from __future__ import absolute_import, unicode_literals
 #
 # BLOG_USE_FEATURED_IMAGE = True
 
+SECRET_KEY = "d5xp*u6hh(m4ux@8txy!^8h!vypb51)hw2uxdd-x5^1hcs&21m"
+
 # If True, the south application will be automatically added to the
 # INSTALLED_APPS setting.
 USE_SOUTH = True
@@ -94,7 +96,7 @@ MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -103,12 +105,12 @@ ALLOWED_HOSTS = []
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = None
+TIME_ZONE = 'Europe/Kiev'
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
 
-# Language code for this installation. All choices can be found here:
+# Language code for6 this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = "en"
 
@@ -121,16 +123,16 @@ LANGUAGES = (
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = False
+DEBUG = True
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
-SITE_ID = 1
+SITE_ID = 2
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
 
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
@@ -159,9 +161,9 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
+        "ENGINE": "django.db.backends.sqlite3",
         # DB name or path to database file if using sqlite3.
-        "NAME": "",
+        "NAME": "my_db",
         # Not used with sqlite3.
         "USER": "",
         # Not used with sqlite3.
@@ -258,10 +260,10 @@ TEMPLATES = [
 ################
 
 INSTALLED_APPS = (
-    "flat",
-    #"moderna",
-    #"nova",
-    #"solid",
+    #"flat",
+    # "moderna",
+    "nova",
+ #   "solid",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
+
+{% block main %}
+{% blocktrans %}
+
+<div class="container-fluid">
+<h2>Привет!</h2>
+<p>
+  Социальный эксеримент - Слуги народа отобрали право на жизнь.
+Мне 36 лет. У меня 4 стадия. Неоперабельная меланома. Единственный шанс - масло Симсона отняли, обвинили в сбыте. 
+ Я буду бороться до конца за свою жизнь, права. Онлайн
+</p>
+
+</div>
+{% endblocktrans %}
+{% endblock %}
